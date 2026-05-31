@@ -1,252 +1,111 @@
-'use client';
-
-import { useState } from 'react';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
+import { MapPin, Phone, Mail, MessageCircle } from 'lucide-react';
 import MarketingImageSections from '@/components/marketing-image-sections';
 
-import { MapPin, Mail, Phone } from 'lucide-react';
+export const metadata = {
+  title: 'Contact Us | Nav Sanyogita Foundation',
+  description: 'Get in touch with Nav Sanyogita Foundation. We would love to hear from you.',
+};
 
-export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    subject: '',
-    message: ''
-  });
-
-  const handleChange = (e: any) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = (e: any) => {
-    e.preventDefault();
-    const whatsappMessage = encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nSubject: ${formData.subject}\nMessage: ${formData.message}`
-    );
-    window.open(`https://wa.me/9891075655?text=${whatsappMessage}`, '_blank');
-    setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
-  };
-
+export default function ContactPage() {
   return (
-    <div className="w-full min-h-screen bg-[#F7EBE0]">
+    <div className="w-full min-h-screen bg-[#FCFCF9] text-[#6E675A] font-sans">
       <Header />
 
       {/* Hero Section */}
-      <section className="w-full relative bg-gradient-to-r from-[#6A2A43] to-[#C53357] py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Contact Us</h1>
-          <p className="text-xl text-white/90 max-w-2xl">Get in touch with us. We'd love to hear from you and answer any questions.</p>
+      <section className="w-full relative bg-[#CCD3B1] py-20 md:py-32 overflow-hidden border-b border-[rgba(36,22,1,0.08)]">
+        <div className="max-w-7xl mx-auto px-4 text-center relative z-10">
+          <h1 className="text-4xl md:text-6xl font-extrabold tracking-[-0.05em] text-[#211600] mb-6">
+            Contact Us
+          </h1>
+          <p className="text-xl md:text-2xl text-[#211600]/80 max-w-3xl mx-auto font-medium">
+            Have a question about our programs, want to volunteer, or interested in custom orders? We'd love to hear from you.
+          </p>
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section className="w-full bg-white py-16 md:py-24">
+      {/* Contact Content Section */}
+      <section className="w-full py-20 md:py-32">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12">
-            {/* Contact Form */}
-            <div>
-              <h2 className="text-3xl font-bold text-[#6A2A43] mb-6">Send us a Message</h2>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label className="block text-sm font-semibold text-[#6A2A43] mb-2">Full Name</label>
-                  <input
-                    type="text"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 border border-[#D2BEB5] rounded-lg focus:outline-none focus:border-[#C53357] transition bg-[#F7EBE0]"
-                    placeholder="Your Name"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-semibold text-[#6A2A43] mb-2">Email Address</label>
-                  <input
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 border border-[#D2BEB5] rounded-lg focus:outline-none focus:border-[#C53357] transition bg-[#F7EBE0]"
-                    placeholder="your@email.com"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-semibold text-[#6A2A43] mb-2">Phone Number</label>
-                  <input
-                    type="tel"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 border border-[#D2BEB5] rounded-lg focus:outline-none focus:border-[#C53357] transition bg-[#F7EBE0]"
-                    placeholder="+91 9876543210"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-semibold text-[#6A2A43] mb-2">Subject</label>
-                  <input
-                    type="text"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 border border-[#D2BEB5] rounded-lg focus:outline-none focus:border-[#C53357] transition bg-[#F7EBE0]"
-                    placeholder="How can we help?"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-semibold text-[#6A2A43] mb-2">Message</label>
-                  <textarea
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                    rows={5}
-                    className="w-full px-4 py-3 border border-[#D2BEB5] rounded-lg focus:outline-none focus:border-[#C53357] transition bg-[#F7EBE0] resize-none"
-                    placeholder="Your message here..."
-                  ></textarea>
-                </div>
-                <button
-                  type="submit"
-                  className="w-full bg-[#C53357] hover:bg-[#6A2A43] text-white font-bold py-3 rounded-lg transition shadow-lg"
-                >
-                  Send via WhatsApp
-                </button>
-              </form>
-            </div>
-
+          <div className="grid md:grid-cols-2 gap-12 lg:gap-20">
+            
             {/* Contact Information */}
             <div>
-              <h2 className="text-3xl font-bold text-[#6A2A43] mb-8">Contact Information</h2>
-              
-              {/* Address */}
-              <div className="mb-8 p-6 bg-[#F7EBE0] rounded-lg border-l-4 border-[#CF8322]">
+              <h2 className="text-3xl font-extrabold tracking-[-0.05em] text-[#211600] mb-6">
+                Get In Touch
+              </h2>
+              <p className="text-[#6E675A] leading-[1.8] mb-10">
+                Whether you're looking to support our cause, join our skill development programs, or simply want to learn more about our mission, our team is ready to answer all your questions.
+              </p>
+
+              <div className="space-y-8">
                 <div className="flex items-start gap-4">
-                  <MapPin className="w-6 h-6 text-[#CF8322] flex-shrink-0 mt-1" />
+                  <div className="w-12 h-12 bg-[#F8F8F0] text-[#F46403] rounded-full flex items-center justify-center flex-shrink-0 shadow-sm border border-[rgba(36,22,1,0.06)]">
+                    <MapPin className="w-6 h-6 stroke-[1.5]" />
+                  </div>
                   <div>
-                    <h3 className="font-bold text-[#6A2A43] mb-2">Office Address</h3>
-                    <p className="text-gray-700">
-                      Plot No - 469, Ground Floor,<br />
-                      Opposite Chandra Laxmi Hospital,<br />
-                      Sector - 4, Vaishali, Ghaziabad<br />
-                      Uttar Pradesh, India
+                    <h3 className="text-xl font-bold text-[#211600] mb-1">Our Location</h3>
+                    <p className="text-[#6E675A] leading-[1.6]">
+                      Plot No - 469, Ground Floor, Opposite Chandra Laxmi Hospital, Sector - 4, Vaishali, Ghaziabad
                     </p>
                   </div>
                 </div>
-              </div>
 
-              {/* Phone */}
-              <div className="mb-8 p-6 bg-[#F7EBE0] rounded-lg border-l-4 border-[#CF8322]">
                 <div className="flex items-start gap-4">
-                  <Phone className="w-6 h-6 text-[#CF8322] flex-shrink-0 mt-1" />
+                  <div className="w-12 h-12 bg-[#F8F8F0] text-[#4D7A4C] rounded-full flex items-center justify-center flex-shrink-0 shadow-sm border border-[rgba(36,22,1,0.06)]">
+                    <Phone className="w-6 h-6 stroke-[1.5]" />
+                  </div>
                   <div>
-                    <h3 className="font-bold text-[#6A2A43] mb-2">Phone</h3>
-                    <a href="tel:9891075655" className="text-[#C53357] font-bold hover:text-[#6A2A43] transition text-lg">
-                      9891075655
+                    <h3 className="text-xl font-bold text-[#211600] mb-1">Phone</h3>
+                    <a href="tel:9891075655" className="text-[#6E675A] hover:text-[#F46403] transition leading-[1.6]">
+                      +91 98910 75655
                     </a>
-                    <p className="text-gray-700 text-sm mt-1">Available Mon-Sat: 9AM-6PM IST</p>
                   </div>
                 </div>
-              </div>
 
-              {/* Email */}
-              <div className="mb-8 p-6 bg-[#F7EBE0] rounded-lg border-l-4 border-[#CF8322]">
                 <div className="flex items-start gap-4">
-                  <Mail className="w-6 h-6 text-[#CF8322] flex-shrink-0 mt-1" />
+                  <div className="w-12 h-12 bg-[#F8F8F0] text-[#F46403] rounded-full flex items-center justify-center flex-shrink-0 shadow-sm border border-[rgba(36,22,1,0.06)]">
+                    <Mail className="w-6 h-6 stroke-[1.5]" />
+                  </div>
                   <div>
-                    <h3 className="font-bold text-[#6A2A43] mb-2">Email</h3>
-                    <a href="mailto:contact@navsanyogita.org" className="text-[#C53357] font-bold hover:text-[#6A2A43] transition">
+                    <h3 className="text-xl font-bold text-[#211600] mb-1">Email</h3>
+                    <a href="mailto:contact@navsanyogita.org" className="text-[#6E675A] hover:text-[#F46403] transition leading-[1.6]">
                       contact@navsanyogita.org
                     </a>
-                    <p className="text-gray-700 text-sm mt-1">We'll respond within 24 hours</p>
                   </div>
-                </div>
-              </div>
-
-              {/* Social Links */}
-              <div className="p-6 bg-gradient-to-br from-[#6A2A43] to-[#C53357] rounded-lg text-white">
-                <h3 className="font-bold mb-4">Follow Us</h3>
-                <div className="flex flex-wrap gap-3">
-                  {[
-                    { name: 'Facebook', icon: '📘' },
-                    { name: 'Instagram', icon: '📷' },
-                    { name: 'Twitter', icon: '𝕏' },
-                    { name: 'LinkedIn', icon: '💼' },
-                  ].map((social, idx) => (
-                    <a
-                      key={idx}
-                      href="#"
-                      className="flex items-center gap-2 bg-white/20 hover:bg-white/30 px-4 py-2 rounded-lg transition font-semibold"
-                    >
-                      {social.icon} {social.name}
-                    </a>
-                  ))}
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* FAQ Section */}
-      <section className="w-full bg-[#F7EBE0] py-16 md:py-24">
-        <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#6A2A43] mb-12 text-center">Frequently Asked Questions</h2>
-          <div className="space-y-6">
-            {[
-              {
-                q: 'How do I enroll in a program?',
-                a: 'You can contact us via WhatsApp, phone, or email. We&apos;ll provide information about program schedules, fees, and enrollment requirements.'
-              },
-              {
-                q: 'Are the programs free?',
-                a: 'Program fees are minimal and subsidized for low-income women. We also offer scholarship and payment plans for eligible candidates.'
-              },
-              {
-                q: 'How long are the programs?',
-                a: 'Program duration varies from 1-6 months depending on the skill. Most programs are 2-3 months with flexible scheduling options.'
-              },
-              {
-                q: 'Do you provide job placement?',
-                a: 'Yes! We provide job placement assistance and help connect graduates with employers. We also support those interested in starting their own businesses.'
-              },
-              {
-                q: 'How can I purchase products?',
-                a: 'You can browse our shop section and click any product to order via WhatsApp. We deliver across India with secure payment options.'
-              },
-              {
-                q: 'How can I support your mission?',
-                a: 'You can donate, volunteer, purchase our products, or recommend our programs to others. Every contribution makes a difference!'
-              },
-            ].map((item: any, idx: number) => (
-              <div key={idx} className="bg-white p-6 rounded-lg shadow-md border-l-4 border-[#C53357]">
-                <h3 className="text-lg font-bold text-[#6A2A43] mb-3">{item.q}</h3>
-                <p className="text-gray-700">{item.a}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="w-full bg-gradient-to-r from-[#6A2A43] to-[#C53357] py-16">
-        <div className="max-w-4xl mx-auto px-4 text-center text-white">
-          <h2 className="text-3xl font-bold mb-6">Ready to Make a Difference?</h2>
-          <p className="text-lg mb-8">Join us in empowering women. Whether you want to learn, teach, donate, or volunteer—there's a way for you to be part of this movement.</p>
-          <div className="flex flex-col md:flex-row gap-4 justify-center">
-            <a href="/programs" className="bg-[#CF8322] hover:bg-white hover:text-[#6A2A43] text-white font-bold px-8 py-3 rounded-lg transition">
-              Explore Programs
-            </a>
-            <a href="https://wa.me/9891075655?text=Hello! I want to volunteer with Nav Sanyogita Foundation." target="_blank" rel="noopener noreferrer" className="bg-white text-[#6A2A43] hover:bg-[#F7EBE0] font-bold px-8 py-3 rounded-lg transition">
-              Become a Volunteer
-            </a>
+            {/* Contact Form */}
+            <div className="bg-white rounded-[24px] p-8 md:p-10 shadow-[0_18px_40px_rgba(20,12,0,0.12)] border border-[rgba(36,22,1,0.06)]">
+              <h3 className="text-2xl font-extrabold tracking-[-0.05em] text-[#211600] mb-6">Send us a Message</h3>
+              <form className="space-y-6">
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="firstName" className="block text-sm font-semibold text-[#211600] mb-2">First Name</label>
+                    <input type="text" id="firstName" className="w-full bg-[#FCFCF9] border border-[rgba(36,22,1,0.15)] rounded-lg px-4 py-3 focus:outline-none focus:border-[#F46403] focus:ring-1 focus:ring-[#F46403] transition" placeholder="John" />
+                  </div>
+                  <div>
+                    <label htmlFor="lastName" className="block text-sm font-semibold text-[#211600] mb-2">Last Name</label>
+                    <input type="text" id="lastName" className="w-full bg-[#FCFCF9] border border-[rgba(36,22,1,0.15)] rounded-lg px-4 py-3 focus:outline-none focus:border-[#F46403] focus:ring-1 focus:ring-[#F46403] transition" placeholder="Doe" />
+                  </div>
+                </div>
+                <div>
+                  <label htmlFor="email" className="block text-sm font-semibold text-[#211600] mb-2">Email Address</label>
+                  <input type="email" id="email" className="w-full bg-[#FCFCF9] border border-[rgba(36,22,1,0.15)] rounded-lg px-4 py-3 focus:outline-none focus:border-[#F46403] focus:ring-1 focus:ring-[#F46403] transition" placeholder="john@example.com" />
+                </div>
+                <div>
+                  <label htmlFor="message" className="block text-sm font-semibold text-[#211600] mb-2">Message</label>
+                  <textarea id="message" rows={4} className="w-full bg-[#FCFCF9] border border-[rgba(36,22,1,0.15)] rounded-lg px-4 py-3 focus:outline-none focus:border-[#F46403] focus:ring-1 focus:ring-[#F46403] transition resize-none" placeholder="How can we help you?"></textarea>
+                </div>
+              <button type="button" className="w-full bg-[#F46403] hover:bg-[#D95200] text-white font-bold px-8 py-4 rounded-full transition duration-300 shadow-md flex items-center justify-center gap-2">
+                  <MessageCircle className="w-5 h-5" />
+                  Send Message
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </section>
@@ -256,4 +115,3 @@ export default function Contact() {
     </div>
   );
 }
-

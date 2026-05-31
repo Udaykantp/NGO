@@ -31,8 +31,8 @@ export default function AdminNav() {
               href={item.href}
               className={`flex items-center gap-3 px-4 py-3 rounded-lg transition ${
                 active
-                  ? 'bg-[#6A2A43] text-white'
-                  : 'text-[#6A2A43] hover:bg-[#F5E6D3]'
+              ? 'bg-[var(--color-accent)] text-[var(--color-white)]'
+              : 'text-[var(--color-heading)] hover:bg-[var(--color-background)] hover:text-[var(--color-accent)]'
               }`}
             >
               <Icon className="w-5 h-5 stroke-[1.5]" />
@@ -46,7 +46,7 @@ export default function AdminNav() {
       <div className="md:hidden mb-4">
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="flex items-center gap-2 px-4 py-2 bg-[#6A2A43] text-white rounded-lg font-semibold text-sm tracking-wide"
+          className="flex items-center gap-2 px-4 py-2 bg-[var(--color-accent)] text-[var(--color-white)] rounded-lg font-semibold text-sm tracking-wide shadow-md"
         >
           {mobileMenuOpen ? <X className="w-5 h-5 stroke-[1.5]" /> : <Menu className="w-5 h-5 stroke-[1.5]" />}
           Admin Menu
@@ -55,7 +55,7 @@ export default function AdminNav() {
 
       {/* Mobile Navigation Menu */}
       {mobileMenuOpen && (
-        <nav className="md:hidden flex flex-col gap-2 mb-6 bg-white rounded-lg p-4 border border-[#D2BEB5]">
+        <nav className="md:hidden flex flex-col gap-2 mb-6 bg-[var(--color-white)] rounded-lg p-4 border border-[#DFE2CF] shadow-sm">
           {navItems.map((item) => {
             const Icon = item.icon;
             const active = isActive(item.href);
@@ -66,8 +66,8 @@ export default function AdminNav() {
                 onClick={() => setMobileMenuOpen(false)}
                 className={`flex items-center gap-3 px-4 py-3 rounded-lg transition ${
                   active
-                    ? 'bg-[#6A2A43] text-white'
-                    : 'text-[#6A2A43] hover:bg-[#F5E6D3]'
+                    ? 'bg-[var(--color-accent)] text-[var(--color-white)]'
+                    : 'text-[var(--color-heading)] hover:bg-[var(--color-background)] hover:text-[var(--color-accent)]'
                 }`}
               >
               <Icon className="w-5 h-5 stroke-[1.5]" />

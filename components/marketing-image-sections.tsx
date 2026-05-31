@@ -26,13 +26,13 @@ const sections: ImageSection[] = [
 
 export default function MarketingImageSections() {
   return (
-    <section className="w-full bg-[#F7EBE0] py-16 md:py-24">
+    <section className="w-full bg-[#FCFCF9] py-20 md:py-32">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="text-center mb-10">
-          <h2 className="text-3xl md:text-4xl font-bold tracking-wide text-[#6A2A43] mb-3">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-5xl font-extrabold tracking-[-0.05em] text-[#211600] mb-4">
             Highlights
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto font-medium tracking-wide">
+          <p className="text-[#6E675A] max-w-2xl mx-auto leading-[1.8] text-lg">
             Four quick moments of impact—light content, beautiful images.
           </p>
         </div>
@@ -41,17 +41,17 @@ export default function MarketingImageSections() {
           {sections.map((s, idx) => (
             <div
               key={idx}
-              className="group relative overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition"
+              className="group relative overflow-hidden rounded-[24px] shadow-[0_18px_40px_rgba(20,12,0,0.12)] hover:-translate-y-[5px] border border-[rgba(36,22,1,0.06)] transition duration-300 cursor-pointer"
             >
               <img
                 src={s.img}
                 alt={s.title}
-                className="w-full h-72 md:h-80 object-cover group-hover:scale-110 transition duration-500"
+                className="w-full h-72 md:h-80 object-cover group-hover:scale-105 transition duration-500"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-              <div className="absolute left-5 right-5 bottom-5">
-                <p className="text-white font-semibold tracking-wide text-lg drop-shadow">
+              <div className="absolute inset-0 bg-gradient-to-t from-[#241601]/80 via-[#241601]/20 to-transparent opacity-90 group-hover:opacity-100 transition duration-300" />
+              <div className="absolute left-6 right-6 bottom-6">
+                <p className="text-white font-extrabold tracking-[-0.02em] text-xl drop-shadow-sm">
                   {s.title}
                 </p>
               </div>
