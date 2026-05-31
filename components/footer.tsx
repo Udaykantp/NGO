@@ -7,17 +7,17 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div>
-            <h4 className="font-bold text-lg mb-4 text-[#CF8322]">Nav Sanyogita Foundation</h4>
-            <p className="text-gray-300 text-sm">
+            <h4 className="font-bold tracking-wide text-lg mb-4 text-[#CF8322]">Nav Sanyogita Foundation</h4>
+            <p className="text-gray-300 text-sm tracking-wide">
               Empowering women through skill development, entrepreneurship, and sustainable livelihood programs.
             </p>
-            <p className="text-gray-400 text-xs mt-4 italic">
+            <p className="text-gray-400 text-xs mt-4 italic tracking-wide">
               कोशल से आत्मनिर्भरता
             </p>
           </div>
           <div>
-            <h4 className="font-bold mb-4 text-[#C53357]">Quick Links</h4>
-            <ul className="text-gray-300 text-sm space-y-2">
+            <h4 className="font-bold tracking-wide mb-4 text-[#C53357]">Quick Links</h4>
+            <ul className="text-gray-300 text-sm space-y-2 tracking-wide font-medium">
               <li><Link href="/" className="hover:text-white transition">Home</Link></li>
               <li><Link href="/about" className="hover:text-white transition">About Us</Link></li>
               <li><Link href="/programs" className="hover:text-white transition">Programs</Link></li>
@@ -26,8 +26,8 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="font-bold mb-4 text-[#C53357]">Programs</h4>
-            <ul className="text-gray-300 text-sm space-y-2">
+            <h4 className="font-bold tracking-wide mb-4 text-[#C53357]">Programs</h4>
+            <ul className="text-gray-300 text-sm space-y-2 tracking-wide font-medium">
               <li><a href="#" className="hover:text-white transition">Tailoring & Stitching</a></li>
               <li><a href="#" className="hover:text-white transition">Handicrafts</a></li>
               <li><a href="#" className="hover:text-white transition">Digital Literacy</a></li>
@@ -35,18 +35,18 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <h4 className="font-bold mb-4 text-[#C53357]">Contact Info</h4>
-            <ul className="text-gray-300 text-sm space-y-3">
+            <h4 className="font-bold tracking-wide mb-4 text-[#C53357]">Contact Info</h4>
+            <ul className="text-gray-300 text-sm space-y-3 tracking-wide font-medium">
               <li className="flex items-start gap-2">
-                <MapPin className="w-4 h-4 mt-1 flex-shrink-0 text-[#CF8322]" />
+                <MapPin className="w-4 h-4 mt-1 flex-shrink-0 text-[#CF8322] stroke-[1.5]" />
                 <span>Plot No - 469, Ground Floor, Opposite Chandra Laxmi Hospital, Sector - 4, Vaishali, Ghaziabad</span>
               </li>
               <li className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-[#CF8322]" />
+                <Phone className="w-4 h-4 text-[#CF8322] stroke-[1.5]" />
                 <a href="tel:9891075655" className="hover:text-white transition">9891075655</a>
               </li>
               <li className="flex items-center gap-2">
-                <Mail className="w-4 h-4 text-[#CF8322]" />
+                <Mail className="w-4 h-4 text-[#CF8322] stroke-[1.5]" />
                 <a href="mailto:contact@navsanyogita.org" className="hover:text-white transition text-xs">contact@navsanyogita.org</a>
               </li>
             </ul>
@@ -54,15 +54,15 @@ export default function Footer() {
         </div>
         <div className="border-t border-gray-700 pt-8">
           <div className="text-center mb-6">
-            <p className="text-[#CF8322] font-semibold mb-2">Follow Us</p>
-            <div className="flex justify-center gap-6">
+            <p className="text-[#CF8322] font-semibold tracking-wide mb-2">Follow Us</p>
+            <div className="flex justify-center gap-6 font-medium tracking-wide text-sm">
               <a href="#" className="text-gray-300 hover:text-[#C53357] transition">Facebook</a>
               <a href="#" className="text-gray-300 hover:text-[#C53357] transition">Instagram</a>
               <a href="#" className="text-gray-300 hover:text-[#C53357] transition">Twitter</a>
               <a href="#" className="text-gray-300 hover:text-[#C53357] transition">LinkedIn</a>
             </div>
           </div>
-          <div className="text-center text-gray-400 text-sm">
+          <div className="text-center text-gray-400 text-sm tracking-wide font-medium">
             <p>&copy; 2024 Nav Sanyogita Foundation. All rights reserved.</p>
             <p className="text-xs mt-2">महिला सशक्तिकरण हमारा संकल्प | Women Empowerment is Our Commitment</p>
           </div>

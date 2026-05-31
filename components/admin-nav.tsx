@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { BarChart3, Package, Grid3x3, Menu, X } from 'lucide-react';
+import { LayoutDashboard, Boxes, Layers, PlusCircle, Menu, X } from 'lucide-react';
 import { useState } from 'react';
 
 export default function AdminNav() {
@@ -10,10 +10,10 @@ export default function AdminNav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navItems = [
-    { href: '/admin/dashboard', label: 'Dashboard', icon: BarChart3 },
-    { href: '/admin/listings', label: 'All Listings', icon: Package },
-    { href: '/admin/categories', label: 'By Category', icon: Grid3x3 },
-    { href: '/admin/create', label: 'Create Product', icon: Grid3x3 },
+    { href: '/admin/dashboard', label: 'Dashboard', icon: LayoutDashboard },
+    { href: '/admin/listings', label: 'All Listings', icon: Boxes },
+    { href: '/admin/categories', label: 'By Category', icon: Layers },
+    { href: '/admin/create', label: 'Create Product', icon: PlusCircle },
   ];
 
   const isActive = (href: string) => pathname === href;
@@ -35,8 +35,8 @@ export default function AdminNav() {
                   : 'text-[#6A2A43] hover:bg-[#F5E6D3]'
               }`}
             >
-              <Icon className="w-5 h-5" />
-              <span className="font-medium">{item.label}</span>
+              <Icon className="w-5 h-5 stroke-[1.5]" />
+              <span className="font-semibold text-sm tracking-wide">{item.label}</span>
             </Link>
           );
         })}
@@ -46,9 +46,9 @@ export default function AdminNav() {
       <div className="md:hidden mb-4">
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="flex items-center gap-2 px-4 py-2 bg-[#6A2A43] text-white rounded-lg"
+          className="flex items-center gap-2 px-4 py-2 bg-[#6A2A43] text-white rounded-lg font-semibold text-sm tracking-wide"
         >
-          {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          {mobileMenuOpen ? <X className="w-5 h-5 stroke-[1.5]" /> : <Menu className="w-5 h-5 stroke-[1.5]" />}
           Admin Menu
         </button>
       </div>
@@ -70,8 +70,8 @@ export default function AdminNav() {
                     : 'text-[#6A2A43] hover:bg-[#F5E6D3]'
                 }`}
               >
-                <Icon className="w-5 h-5" />
-                <span className="font-medium">{item.label}</span>
+              <Icon className="w-5 h-5 stroke-[1.5]" />
+              <span className="font-semibold text-sm tracking-wide">{item.label}</span>
               </Link>
             );
           })}

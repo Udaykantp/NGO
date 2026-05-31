@@ -29,10 +29,10 @@ export default function MarketingImageSections() {
     <section className="w-full bg-[#F7EBE0] py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-10">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#6A2A43] mb-3">
+          <h2 className="text-3xl md:text-4xl font-bold tracking-wide text-[#6A2A43] mb-3">
             Highlights
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="text-gray-600 max-w-2xl mx-auto font-medium tracking-wide">
             Four quick moments of impact—light content, beautiful images.
           </p>
         </div>
@@ -51,7 +51,7 @@ export default function MarketingImageSections() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
               <div className="absolute left-5 right-5 bottom-5">
-                <p className="text-white font-semibold text-lg drop-shadow">
+                <p className="text-white font-semibold tracking-wide text-lg drop-shadow">
                   {s.title}
                 </p>
               </div>
@@ -62,4 +62,3 @@ export default function MarketingImageSections() {
     </section>
   );
 }
-
