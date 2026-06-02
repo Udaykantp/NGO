@@ -2,6 +2,7 @@ import Header from '@/components/header';
 import Footer from '@/components/footer';
 import MarketingImageSections from '@/components/marketing-image-sections';
 import { Target, Eye, Shield, Briefcase, Heart, Leaf, Handshake } from 'lucide-react';
+import TopAnnouncementBar from '@/components/TopAnnouncementBar';
 
 
 export const metadata = {
@@ -20,9 +21,16 @@ export default function About() {
           <h1 className="text-4xl md:text-6xl font-extrabold tracking-[-0.05em] text-[#211600] mb-6">
             About Nav Sanyogita Foundation
           </h1>
-          <p className="text-xl md:text-2xl text-[#211600]/80 max-w-3xl mx-auto font-medium">
+          <p className="text-xl md:text-2xl text-[#211600]/80 max-w-3xl mx-auto font-medium mb-12">
             Empowering women through skill development and sustainable livelihood since our inception.
           </p>
+          <div className="relative h-64 md:h-96 max-w-5xl mx-auto rounded-[32px] overflow-hidden shadow-[0_24px_50px_rgba(20,12,0,0.15)] border border-[rgba(36,22,1,0.06)]">
+            <img
+              src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=1200&h=600&fit=crop"
+              alt="Women skills training"
+              className="w-full h-full object-cover"
+            />
+          </div>
         </div>
       </section>
 
@@ -128,6 +136,7 @@ export default function About() {
 
       <MarketingImageSections />
       <Footer />
+      <TopAnnouncementBar />
     </div>
   );
 }

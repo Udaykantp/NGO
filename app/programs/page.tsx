@@ -40,7 +40,7 @@ export default function ProgramsPage() {
                 title: 'Handicrafts & Embroidery',
                 description: 'Traditional art forms combined with modern techniques for creative income generation.',
                 icon: <Palette className="w-7 h-7 text-[#F9D05F] stroke-[1.5]" />,
-                image: 'https://images.unsplash.com/photo-1578500494198-246f612d03b3?w=800&h=600&fit=crop'
+                image: 'https://images.unsplash.com/photo-1606760227091-3dd870d97f1d?w=800&h=600&fit=crop'
               },
               {
                 title: 'Digital Literacy',
@@ -52,7 +52,7 @@ export default function ProgramsPage() {
                 title: 'Beauty & Wellness',
                 description: 'Beauty services, wellness, and personal care training programs.',
                 icon: <Sparkles className="w-7 h-7 text-[#F46403] stroke-[1.5]" />,
-                image: 'https://images.unsplash.com/photo-1596885642239-c3b8fb8b0c84?w=800&h=600&fit=crop'
+                image: 'https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=800&h=600&fit=crop'
               },
               {
                 title: 'Entrepreneurship',
@@ -64,7 +64,7 @@ export default function ProgramsPage() {
                 title: 'Menstrual Health',
                 description: 'Health awareness and eco-friendly menstrual hygiene product promotion.',
                 icon: <Droplets className="w-7 h-7 text-[#4E9B71] stroke-[1.5]" />,
-                image: 'https://images.unsplash.com/photo-1631217174694-f8a9f2ee0c87?w=800&h=600&fit=crop'
+                image: 'https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=800&h=600&fit=crop'
               },
             ].map((program, index) => (
               <div

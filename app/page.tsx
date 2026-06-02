@@ -1,6 +1,7 @@
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import MarketingImageSections from '@/components/marketing-image-sections';
+import TopAnnouncementBar from '@/components/TopAnnouncementBar';
 
 // Decorative SVG Components
 const CornerSticker = ({ className = '' }: { className?: string }) => (
@@ -117,7 +118,7 @@ export default function Home() {
                 category: 'Tailoring',
                 price: '₹899',
                 description: 'Traditional silk dupatta with embroidered borders',
-                image: 'https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=400&h=400&fit=crop',
+                image: 'https://images.unsplash.com/photo-1605518216938-7c31b7b14ad0?w=400&h=400&fit=crop',
                 details: 'Pure silk dupatta - hand-embroidered borders, traditional patterns, 2.5 meters'
               },
               {
@@ -135,7 +136,7 @@ export default function Home() {
                 category: 'Tailoring',
                 price: '₹799',
                 description: 'Traditional embroidered blouse with mirror work',
-                image: 'https://images.unsplash.com/photo-1595568022181-92d282ce6134?w=400&h=400&fit=crop',
+                image: 'https://images.unsplash.com/photo-1584992236310-6edddc08acff?w=400&h=400&fit=crop',
                 details: 'Handmade embroidered blouse - mirror work, traditional designs, customizable sizes'
               },
               {
@@ -144,7 +145,7 @@ export default function Home() {
                 category: 'Handicrafts',
                 price: '₹599',
                 description: 'Beautiful macramé and embroidered wall hanging',
-                image: 'https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?w=400&h=400&fit=crop',
+                image: 'https://images.unsplash.com/photo-1544816155-12df9643f363?w=400&h=400&fit=crop',
                 details: 'Hand-crafted wall hanging - macramé with beads, 24x30 inches, ready to hang'
               },
             ].map((product) => {
@@ -250,7 +251,7 @@ export default function Home() {
                 title: 'Women Empowerment'
               },
               {
-                img: 'https://images.unsplash.com/photo-1557804506-669714d2e9d8?w=400&h=300&fit=crop',
+                img: 'https://images.unsplash.com/photo-1584992236310-6edddc08acff?w=400&h=300&fit=crop',
                 title: 'Tailoring Training'
               },
               {
@@ -258,11 +259,11 @@ export default function Home() {
                 title: 'Group Activities'
               },
               {
-                img: 'https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?w=400&h=300&fit=crop',
+                img: 'https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=400&h=300&fit=crop',
                 title: 'Craft Production'
               },
               {
-                img: 'https://images.unsplash.com/photo-1516321318423-f06f70504c8a?w=400&h=300&fit=crop',
+                img: 'https://images.unsplash.com/photo-1573164713988-8665fc963095?w=400&h=300&fit=crop',
                 title: 'Digital Literacy'
               },
               {
@@ -315,7 +316,7 @@ export default function Home() {
             </div>
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1578992673578-77c20e0f1e2a?w=500&h=400&fit=crop"
+                src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=500&h=400&fit=crop"
                 alt="Women skills training"
                 className="rounded-[32px] shadow-[0_24px_50px_rgba(20,12,0,0.15)] w-full object-cover h-[500px]"
               />
@@ -426,25 +427,25 @@ export default function Home() {
                 title: 'Tailoring & Stitching',
                 description: 'Professional tailoring and stitching training for women to gain employment and start businesses.',
                 icon: <svg className="w-8 h-8 text-[#F46403]" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2v20M2 12h20"/></svg>,
-                image: 'https://images.unsplash.com/photo-1595568022181-92d282ce6134?w=400&h=300&fit=crop'
+                image: 'https://images.unsplash.com/photo-1584992236310-6edddc08acff?w=400&h=300&fit=crop'
               },
               {
                 title: 'Handicrafts & Embroidery',
                 description: 'Traditional art forms combined with modern techniques for creative income generation.',
                 icon: <svg className="w-8 h-8 text-[#F9D05F]" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><path d="M12 2l3 6 6 1-4 4 1 6-6-3-6 3 1-6-4-4 6-1z"/></svg>,
-                image: 'https://images.unsplash.com/photo-1578500494198-246f612d03b3?w=400&h=300&fit=crop'
+                image: 'https://images.unsplash.com/photo-1606760227091-3dd870d97f1d?w=400&h=300&fit=crop'
               },
               {
                 title: 'Digital Literacy',
                 description: 'Essential computer and internet skills to help women participate in the digital economy.',
                 icon: <svg className="w-8 h-8 text-[#4E9B71]" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><path d="M8 21h8M12 17v4"/></svg>,
-                image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&h=300&fit=crop'
+                image: 'https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?w=400&h=300&fit=crop'
               },
               {
                 title: 'Beauty & Wellness',
                 description: 'Beauty services, wellness, and personal care training programs.',
                 icon: <svg className="w-8 h-8 text-[#F46403]" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM12 8v4l3 3"/></svg>,
-                image: 'https://images.unsplash.com/photo-1596885642239-c3b8fb8b0c84?w=400&h=300&fit=crop'
+                image: 'https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=400&h=300&fit=crop'
               },
               {
                 title: 'Entrepreneurship',
@@ -456,7 +457,7 @@ export default function Home() {
                 title: 'Menstrual Health',
                 description: 'Health awareness and eco-friendly menstrual hygiene product promotion.',
                 icon: <svg className="w-8 h-8 text-[#4E9B71]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>,
-                image: 'https://images.unsplash.com/photo-1631217174694-f8a9f2ee0c87?w=400&h=300&fit=crop'
+                image: 'https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=400&h=300&fit=crop'
               },
             ].map((program, index) => (
               <div
@@ -483,66 +484,6 @@ export default function Home() {
                     <button className="text-[#F46403] font-bold text-sm hover:text-[#D95200] transition">
                       Learn More →
                     </button>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Success Stories Section */}
-      <section className="w-full bg-[#FCFCF9] py-20 md:py-32">
-        <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl md:text-5xl font-extrabold tracking-[-0.05em] text-center mb-4 text-[#211600]">
-            Success Stories
-          </h2>
-          <p className="text-center text-[#6E675A] mb-16 max-w-2xl mx-auto leading-[1.8]">
-            Meet the women whose lives have been transformed through our programs
-          </p>
-
-          <div className="grid md:grid-cols-3 gap-10">
-            {[
-              {
-                name: 'Priya Sharma',
-                story: 'Started her own tailoring business and now earns ₹25,000/month',
-                image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=500&fit=crop',
-                role: 'Tailoring Entrepreneur'
-              },
-              {
-                name: 'Anjali Verma',
-                story: 'Developed skills in embroidery and now runs a successful home business',
-                image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=500&fit=crop',
-                role: 'Craft Artisan'
-              },
-              {
-                name: 'Meera Singh',
-                story: 'Gained digital literacy and now works as a virtual assistant',
-                image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=500&fit=crop',
-                role: 'Digital Professional'
-              },
-            ].map((story, idx) => (
-            <div key={idx} className="bg-white rounded-[24px] overflow-hidden shadow-[0_18px_40px_rgba(20,12,0,0.12)] hover:-translate-y-[5px] border border-[rgba(36,22,1,0.06)] transition duration-300">
-                {/* Story Image */}
-                <div className="relative h-80 overflow-hidden bg-[#F8F8F0]">
-                  <img
-                    src={story.image}
-                    alt={story.name}
-                    className="w-full h-full object-cover hover:scale-105 transition duration-500"
-                  />
-                </div>
-
-                {/* Story Content */}
-                <div className="p-8">
-                <h3 className="text-2xl font-extrabold tracking-[-0.05em] text-[#211600] mb-1">{story.name}</h3>
-                <p className="text-[#4D7A4C] font-bold text-sm mb-4">{story.role}</p>
-                <p className="text-[#6E675A] leading-[1.8] mb-6">"{story.story}"</p>
-                  <div className="flex items-center gap-1.5">
-                    {[...Array(5)].map((_, i) => (
-                    <span key={i} className="text-[#F9D05F]">
-                      <svg className="w-5 h-5 inline-block" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                    </span>
-                    ))}
                   </div>
                 </div>
               </div>
@@ -581,6 +522,7 @@ export default function Home() {
 
       <MarketingImageSections />
       <Footer />
+      <TopAnnouncementBar />
     </div>
   );
 }
