@@ -8,6 +8,7 @@ import Header from '@/components/header';
 import Footer from '@/components/footer';
 import AdminNav from '@/components/admin-nav';
 import { AlertCircle, Loader } from 'lucide-react';
+import TopAnnouncementBar from '@/components/TopAnnouncementBar';
 
 interface AdminWrapperProps {
   children: React.ReactNode;
@@ -71,6 +72,7 @@ export default function AdminWrapper({ children, title, description }: AdminWrap
           </div>
         </div>
         <Footer />
+        <TopAnnouncementBar />
       </div>
     );
   }
@@ -106,6 +108,7 @@ export default function AdminWrapper({ children, title, description }: AdminWrap
       </main>
 
       <Footer />
+      <TopAnnouncementBar />
     </div>
   );
 }
