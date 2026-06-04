@@ -1,6 +1,7 @@
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import MarketingImageSections from '@/components/marketing-image-sections';
+import { Users, ShoppingBag, Map, Heart } from 'lucide-react';
 
 export const metadata = {
   title: 'Our Impact | Nav Sanyogita Foundation',
@@ -13,33 +14,48 @@ export default function ImpactPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="w-full relative bg-[#CCD3B1] py-12 md:py-24 overflow-hidden border-b border-[rgba(36,22,1,0.08)]">
-        <div className="max-w-7xl mx-auto px-4 text-center relative z-10">
-          <h1 className="text-3xl md:text-5xl font-extrabold tracking-[-0.05em] text-[#211600] mb-4 md:mb-6">
-            Our Impact & Objectives
+      <section className="w-full relative py-20 md:py-32 overflow-hidden bg-[#241601]">
+        <div className="absolute inset-0 z-0 opacity-30">
+          <img 
+            src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=1600&h=800&fit=crop" 
+            alt="Impact Background" 
+            className="w-full h-full object-cover" 
+          />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-t from-[#241601] via-[#241601]/80 to-transparent z-0"></div>
+        <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
+          <span className="inline-block py-1.5 px-4 rounded-full bg-[#F46403]/20 text-[#F46403] font-bold text-sm mb-6 border border-[#F46403]/30 tracking-widest uppercase shadow-sm">
+            Our Impact
+          </span>
+          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-white mb-6 leading-tight">
+            Driving Change, <br className="hidden md:block"/> Empowering Lives
           </h1>
-          <p className="text-base sm:text-lg md:text-xl text-[#211600]/80 max-w-3xl mx-auto font-medium leading-relaxed">
-            See the real impact of women empowerment and skill development. We are committed to creating lasting change in our communities.
+          <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto font-medium leading-relaxed">
+            See the real impact of women empowerment and skill development. We are committed to creating lasting, sustainable change in our communities.
           </p>
         </div>
       </section>
 
       {/* Stats Section */}
-      <section className="w-full py-12 md:py-20">
+      <section className="w-full py-16 md:py-24 bg-[#FCFCF9]">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="flex md:grid overflow-x-auto md:overflow-visible md:grid-cols-4 gap-4 md:gap-6 text-center pb-6 md:pb-0 snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] -mx-4 px-4 md:mx-0 md:px-0 after:content-[''] after:w-[1px] after:flex-shrink-0 after:md:hidden">
+          <div className="flex md:grid overflow-x-auto md:overflow-visible md:grid-cols-4 gap-6 md:gap-8 text-center pb-8 md:pb-0 snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] -mx-4 px-4 md:mx-0 md:px-0 after:content-[''] after:w-[1px] after:flex-shrink-0 after:md:hidden">
             {[
-              { number: '5,000+', label: 'Women Trained' },
-              { number: '10,000+', label: 'Products Sold' },
-              { number: '50+', label: 'Communities Reached' },
-              { number: '100%', label: 'Commitment' },
+              { number: '5,000+', label: 'Women Trained', icon: <Users className="w-8 h-8 text-[#F46403]" />, color: 'from-[#F46403]/10 to-transparent', borderColor: 'border-[#F46403]/20' },
+              { number: '10,000+', label: 'Products Sold', icon: <ShoppingBag className="w-8 h-8 text-[#4E9B71]" />, color: 'from-[#4E9B71]/10 to-transparent', borderColor: 'border-[#4E9B71]/20' },
+              { number: '50+', label: 'Communities Reached', icon: <Map className="w-8 h-8 text-[#F9D05F]" />, color: 'from-[#F9D05F]/10 to-transparent', borderColor: 'border-[#F9D05F]/20' },
+              { number: '100%', label: 'Commitment', icon: <Heart className="w-8 h-8 text-[#C53357]" />, color: 'from-[#C53357]/10 to-transparent', borderColor: 'border-[#C53357]/20' },
             ].map((stat, index) => (
               <div
                 key={index}
-                className="flex-shrink-0 w-[65vw] sm:w-[40vw] md:w-auto snap-center bg-white rounded-[16px] md:rounded-[24px] p-6 md:p-8 shadow-[0_8px_24px_rgba(20,12,0,0.08)] md:shadow-[0_18px_40px_rgba(20,12,0,0.12)] border border-[rgba(36,22,1,0.06)] flex flex-col justify-center items-center min-h-[140px]"
+                className={`flex-shrink-0 w-[70vw] sm:w-[45vw] md:w-auto snap-center bg-white rounded-[24px] p-8 shadow-sm hover:shadow-xl transition-all duration-300 border ${stat.borderColor} flex flex-col justify-center items-center relative overflow-hidden group hover:-translate-y-2`}
               >
-                <div className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#F46403] mb-1 sm:mb-2">{stat.number}</div>
-                <p className="text-[#211600] font-bold text-sm md:text-base leading-snug">{stat.label}</p>
+                <div className={`absolute top-0 left-0 w-full h-full bg-gradient-to-b ${stat.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
+                <div className="w-16 h-16 rounded-full bg-white shadow-sm border border-gray-100 flex items-center justify-center mb-6 relative z-10 group-hover:scale-110 transition-transform duration-300">
+                  {stat.icon}
+                </div>
+                <div className="text-4xl md:text-5xl font-extrabold text-[#211600] mb-2 relative z-10 tracking-tight">{stat.number}</div>
+                <p className="text-[#6E675A] font-bold text-sm md:text-base relative z-10 uppercase tracking-wide">{stat.label}</p>
               </div>
             ))}
           </div>
