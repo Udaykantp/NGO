@@ -52,7 +52,7 @@ export default function Home() {
 
       {/* Hero Section */}
       <section
-        className="w-full relative min-h-[90vh] flex flex-col justify-end pt-24 pb-12 overflow-hidden border-b border-[rgba(36,22,1,0.08)] bg-cover bg-left-top bg-no-repeat bg-[url('/NavSanogitamobile1.png')] md:bg-[url('/NavSanogita1.png')]"
+        className="w-full relative min-h-[90vh] flex flex-col justify-end pt-24 pb-24 md:pb-32 overflow-hidden bg-cover bg-left-top bg-no-repeat bg-[url('/NavSanogitamobile1.png')] md:bg-[url('/NavSanogita1.png')]"
       >
         {/* Corner Stickers */}
         <CornerSticker className="-top-8 -left-8 md:-top-4 md:-left-4" />
@@ -64,7 +64,7 @@ export default function Home() {
         <LeafDoodle className="absolute bottom-16 left-[15%] md:left-[30%] animate-[bounce_6s_infinite]" />
         <FlowerDoodle className="absolute bottom-24 right-[15%] md:right-[25%] animate-[pulse_4s_infinite]" />
 
-        <div className="max-w-4xl mx-auto px-4 text-center relative z-10 w-full">
+        <div className="max-w-4xl mx-auto px-4 text-center relative z-20 w-full">
           <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
             <a href="/programs" className="bg-white/90 backdrop-blur-sm border border-white/20 text-[#241601] hover:bg-white font-bold px-8 py-[14px] rounded-full transition duration-300 shadow-md w-full md:w-auto">
               Get Involved
@@ -73,6 +73,14 @@ export default function Home() {
               Donate Now
             </a>
           </div>
+        </div>
+
+        {/* Smooth Wavy Shape Divider */}
+        <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-10">
+          <svg viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" className="w-full h-[60px] md:h-[120px] block">
+            <path fill="#FCFCF9" d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"></path>
+            <path fill="none" stroke="#C53357" strokeWidth="4" d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64"></path>
+          </svg>
         </div>
       </section>
 
@@ -84,7 +92,7 @@ export default function Home() {
               Our Handmade Products
             </h2>
             <p className="text-[#6E675A] max-w-2xl mx-auto mb-4 leading-[1.8]">
-              जो skill से सिखाया गया है, उस पर ये लोग जो भी product बनायेंगे वो इसी page पे sell हो
+              हमारे कौशल विकास कार्यक्रमों के माध्यम से प्रशिक्षित महिलाओं द्वारा तैयार किए गए सभी हस्तनिर्मित उत्पाद यहाँ बिक्री के लिए उपलब्ध हैं। आपके द्वारा की गई हर खरीदारी सीधे उनकी आत्मनिर्भरता में योगदान देती है।
             </p>
             <p className="text-[#211600] font-semibold">
               Products made with love and skill by our trained women | Click any product to order via WhatsApp

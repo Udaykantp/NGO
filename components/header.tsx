@@ -12,7 +12,18 @@ export default function Header() {
   const navLinks = [
     { href: '/', label: 'Home' },
     { href: '/about', label: 'About Us' },
-    { href: '/programs', label: 'Programs' },
+    { 
+      href: '/programs', 
+      label: 'Programs',
+      dropdown: [
+        { href: '/programs#tailoring', label: 'Tailoring & Stitching' },
+        { href: '/programs#handicrafts', label: 'Handicrafts & Embroidery' },
+        { href: '/programs#digital-literacy', label: 'Digital Literacy' },
+        { href: '/programs#beauty-wellness', label: 'Beauty & Wellness' },
+        { href: '/programs#entrepreneurship', label: 'Entrepreneurship' },
+        { href: '/programs#menstrual-health', label: 'Menstrual Health' },
+      ]
+    },
     { href: '/impact', label: 'Impact' },
     { href: '/shop', label: 'Shop' },
     { href: '/contact', label: 'Contact' },
@@ -68,14 +79,36 @@ export default function Header() {
           {/* Navigation Menu */}
           <nav className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="font-semibold text-sm tracking-wide text-[#211600] hover:text-[#F46403] transition relative group"
-              >
-                {link.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#F46403] group-hover:w-full transition-all duration-300"></span>
-              </Link>
+              <div key={link.href} className="relative group">
+                <Link
+                  href={link.href}
+                  className="font-semibold text-sm tracking-wide text-[#211600] hover:text-[#F46403] transition relative flex items-center gap-1 group/link py-2"
+                >
+                  {link.label}
+                  {link.dropdown && (
+                    <svg className="w-4 h-4 text-[#211600] group-hover/link:text-[#F46403] transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  )}
+                  <span className="absolute bottom-1 left-0 w-0 h-0.5 bg-[#F46403] group-hover/link:w-full transition-all duration-300"></span>
+                </Link>
+
+                {link.dropdown && (
+                  <div className="absolute left-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                    <div className="bg-white rounded-[16px] shadow-[0_18px_40px_rgba(20,12,0,0.12)] border border-[rgba(36,22,1,0.06)] overflow-hidden w-64 flex flex-col py-2">
+                      {link.dropdown.map((dropItem) => (
+                        <Link
+                          key={dropItem.href}
+                          href={dropItem.href}
+                          className="px-5 py-2.5 text-sm font-semibold text-[#6E675A] hover:bg-[#F8F8F0] hover:text-[#F46403] transition-colors"
+                        >
+                          {dropItem.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
             ))}
           </nav>
 
@@ -147,14 +180,29 @@ export default function Header() {
           <div className="md:hidden bg-[var(--color-background)] border-t border-[#DFE2CF] py-4 px-4 shadow-lg">
             <nav className="flex flex-col gap-3">
               {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="font-semibold text-sm tracking-wide text-[var(--color-heading)] hover:text-[var(--color-accent)] py-2 transition"
-                >
-                  {link.label}
-                </Link>
+                <div key={link.href} className="flex flex-col">
+                  <Link
+                    href={link.href}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="font-semibold text-sm tracking-wide text-[var(--color-heading)] hover:text-[var(--color-accent)] py-2 transition flex items-center justify-between"
+                  >
+                    {link.label}
+                  </Link>
+                  {link.dropdown && (
+                    <div className="flex flex-col pl-4 border-l-2 border-[#DFE2CF] ml-2 mt-1 gap-1">
+                      {link.dropdown.map((dropItem) => (
+                        <Link
+                          key={dropItem.href}
+                          href={dropItem.href}
+                          onClick={() => setMobileMenuOpen(false)}
+                          className="text-xs font-semibold text-[var(--color-heading)]/80 hover:text-[var(--color-accent)] py-2 transition"
+                        >
+                          {dropItem.label}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
               ))}
               <div className="border-t border-[#DFE2CF] pt-3 mt-3 flex flex-col gap-2">
                 {!loading && (

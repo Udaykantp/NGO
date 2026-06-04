@@ -32,36 +32,42 @@ export default function ProgramsPage() {
             {[
               {
                 title: 'Tailoring & Stitching',
+                id: 'tailoring',
                 description: 'Professional tailoring and stitching training for women to gain employment and start businesses.',
                 icon: <Scissors className="w-7 h-7 text-[#F46403] stroke-[1.5]" />,
                 image: 'https://images.unsplash.com/photo-1595568022181-92d282ce6134?w=800&h=600&fit=crop'
               },
               {
                 title: 'Handicrafts & Embroidery',
+                id: 'handicrafts',
                 description: 'Traditional art forms combined with modern techniques for creative income generation.',
                 icon: <Palette className="w-7 h-7 text-[#F9D05F] stroke-[1.5]" />,
                 image: 'https://images.unsplash.com/photo-1606760227091-3dd870d97f1d?w=800&h=600&fit=crop'
               },
               {
                 title: 'Digital Literacy',
+                id: 'digital-literacy',
                 description: 'Essential computer and internet skills to help women participate in the digital economy.',
                 icon: <Laptop className="w-7 h-7 text-[#4E9B71] stroke-[1.5]" />,
                 image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&h=600&fit=crop'
               },
               {
                 title: 'Beauty & Wellness',
+                id: 'beauty-wellness',
                 description: 'Beauty services, wellness, and personal care training programs.',
                 icon: <Sparkles className="w-7 h-7 text-[#F46403] stroke-[1.5]" />,
                 image: 'https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=800&h=600&fit=crop'
               },
               {
                 title: 'Entrepreneurship',
+                id: 'entrepreneurship',
                 description: 'Business development and mentorship for women entrepreneurs to start their own ventures.',
                 icon: <Briefcase className="w-7 h-7 text-[#F9D05F] stroke-[1.5]" />,
                 image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop'
               },
               {
                 title: 'Menstrual Health',
+                id: 'menstrual-health',
                 description: 'Health awareness and eco-friendly menstrual hygiene product promotion.',
                 icon: <Droplets className="w-7 h-7 text-[#4E9B71] stroke-[1.5]" />,
                 image: 'https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=800&h=600&fit=crop'
@@ -69,7 +75,8 @@ export default function ProgramsPage() {
             ].map((program, index) => (
               <div
                 key={index}
-                className="flex-shrink-0 w-[85vw] sm:w-[45vw] md:w-auto snap-center bg-white rounded-[24px] overflow-hidden shadow-[0_18px_40px_rgba(20,12,0,0.12)] border border-[rgba(36,22,1,0.06)] group hover:-translate-y-[5px] transition duration-300 flex flex-col h-full"
+                id={program.id}
+                className="flex-shrink-0 w-[85vw] sm:w-[45vw] md:w-auto snap-center bg-white rounded-[24px] overflow-hidden shadow-[0_18px_40px_rgba(20,12,0,0.12)] border border-[rgba(36,22,1,0.06)] group hover:-translate-y-[5px] transition duration-300 flex flex-col h-full scroll-mt-32"
               >
                 <div className="relative h-64 overflow-hidden bg-[#F8F8F0]">
                   <img
