@@ -161,7 +161,7 @@ export default function Header() {
                   href="https://wa.me/9891075655?text=Hello! I would like to make a donation."
                   target="_blank"
                   rel="noopener noreferrer"
-                className="flex items-center gap-2 bg-[#F46403] hover:bg-[#D95200] hover:-translate-y-0.5 text-white font-bold text-sm tracking-wide px-6 py-[10px] rounded-full transition-all duration-300 shadow-[0_4px_14px_rgba(244,100,3,0.3)] hover:shadow-[0_6px_20px_rgba(244,100,3,0.4)]"
+                className="flex items-center gap-2 bg-[#5C4033] hover:bg-[#422E25] hover:-translate-y-0.5 text-white font-bold text-sm tracking-wide px-6 py-[10px] rounded-full transition-all duration-300 shadow-[0_4px_14px_rgba(92,64,51,0.2)] hover:shadow-[0_6px_20px_rgba(92,64,51,0.3)]"
                 >
                   <Heart className="w-5 h-5 stroke-[1.5]" fill="currentColor" />
                   Donate
@@ -274,7 +274,7 @@ export default function Header() {
                       href="https://wa.me/9891075655?text=Hello! I would like to make a donation."
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="bg-[#F46403] hover:bg-[#D95200] text-white font-bold text-base tracking-wide px-6 py-2.5 rounded-xl transition-all duration-300 text-center w-full flex items-center justify-center gap-2 shadow-md"
+                      className="bg-[#5C4033] hover:bg-[#422E25] text-white font-bold text-base tracking-wide px-6 py-2.5 rounded-xl transition-all duration-300 text-center w-full flex items-center justify-center gap-2 shadow-md"
                     >
                       <Heart className="w-5 h-5 stroke-[1.5]" fill="currentColor" />
                       Donate
