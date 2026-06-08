@@ -55,7 +55,7 @@ export default function AdminNav() {
 
       {/* Mobile Navigation Menu */}
       {mobileMenuOpen && (
-        <nav className="md:hidden flex flex-col gap-2 mb-6 bg-[var(--color-white)] rounded-lg p-4 border border-[#DFE2CF] shadow-sm">
+        <nav className="md:hidden flex flex-col gap-2 mb-6 bg-[var(--color-white)] rounded-lg p-4 border border-[#C89AB4]/50 shadow-sm">
           {navItems.map((item) => {
             const Icon = item.icon;
             const active = isActive(item.href);

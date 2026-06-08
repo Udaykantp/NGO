@@ -34,7 +34,7 @@ export default function Header() {
   return (
     <>
       {/* Top Banner */}
-      <div className="relative bg-[#241601] text-[13px] font-sans antialiased overflow-hidden border-b border-black/20">
+      <div className="relative bg-[#693754] text-[13px] font-sans antialiased overflow-hidden border-b border-black/20">
         {/* Repeating Background Pattern */}
         <div 
           className="absolute inset-0 z-0 opacity-[0.15]"
@@ -58,7 +58,7 @@ export default function Header() {
             <span className="text-white/60">Call us:</span>
             <Link 
               href="tel:9891075655" 
-            className="text-white font-medium transition-colors duration-300 hover:text-[#EA7214]"
+            className="text-white font-medium transition-colors duration-300 hover:text-[#E5008D]"
             >
               9891075655
             </Link>
@@ -69,16 +69,16 @@ export default function Header() {
 
       {/* Header/Navigation */}
       <header className="w-full bg-white/85 backdrop-blur-md border-b border-gray-200 sticky top-0 z-50 font-sans antialiased shadow-sm transition-all duration-300">
-        <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
           {/* Logo Section */}
           <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition">
-            <div className="ml-4">
+            <div className="md:ml-2 -my-1">
               <Image 
                 src="/NavSanyogitaLogo.png" 
                 alt="Nav Sanyogita Foundation Logo" 
-                width={180} 
-                height={60} 
-                className="h-10 md:h-12 w-auto object-contain"
+                width={240} 
+                height={80} 
+                className="h-12 md:h-16 lg:h-[72px] w-auto object-contain"
                 priority
               />
             </div>
@@ -90,15 +90,15 @@ export default function Header() {
               <div key={link.href} className="relative group">
                 <Link
                   href={link.href}
-                  className="font-semibold text-[15px] tracking-wide text-[#241601]/90 hover:text-[#F46403] transition-colors duration-300 relative flex items-center gap-1.5 group/link py-2"
+                  className="font-semibold text-[15px] tracking-wide text-[#35353A] hover:text-[#E5008D] transition-colors duration-300 relative flex items-center gap-1.5 group/link py-2"
                 >
                   {link.label}
                   {link.dropdown && (
-                    <svg className="w-4 h-4 text-[#241601]/70 group-hover/link:text-[#F46403] transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4 text-[#35353A]/70 group-hover/link:text-[#E5008D] transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
                   )}
-                  <span className="absolute bottom-1 left-0 w-0 h-[2px] bg-[#F46403] group-hover/link:w-full transition-all duration-300 rounded-full"></span>
+                  <span className="absolute bottom-1 left-0 w-0 h-[2px] bg-[#E5008D] group-hover/link:w-full transition-all duration-300 rounded-full"></span>
                 </Link>
 
                 {link.dropdown && (
@@ -108,7 +108,7 @@ export default function Header() {
                         <Link
                           key={dropItem.href}
                           href={dropItem.href}
-                          className="px-6 py-2.5 text-[15px] font-medium text-[#241601]/80 hover:bg-[#F46403]/5 hover:text-[#F46403] transition-colors duration-200"
+                          className="px-6 py-2.5 text-[15px] font-medium text-[#35353A]/80 hover:bg-[#E5008D]/5 hover:text-[#E5008D] transition-colors duration-200"
                         >
                           {dropItem.label}
                         </Link>
@@ -128,14 +128,14 @@ export default function Header() {
                   <div className="flex items-center gap-3">
                     <Link
                       href="/profile"
-                      className="flex items-center gap-2 text-[#241601]/90 hover:text-[#F46403] font-semibold text-[15px] tracking-wide transition-colors duration-300"
+                      className="flex items-center gap-2 text-[#35353A] hover:text-[#E5008D] font-semibold text-[15px] tracking-wide transition-colors duration-300"
                     >
                       <User className="w-5 h-5 stroke-[1.5]" />
                       {user.displayName || 'Profile'}
                     </Link>
                     <button
                       onClick={logout}
-                      className="flex items-center gap-2 bg-white/50 border border-gray-200 text-[#241601]/90 hover:bg-gray-50 hover:border-gray-300 font-semibold text-sm tracking-wide px-6 py-[10px] rounded-full transition-all duration-300 shadow-sm"
+                      className="flex items-center gap-2 bg-white/50 border border-[#693754] text-[#693754] hover:bg-[#562B43] hover:text-white font-semibold text-sm tracking-wide px-6 py-[10px] rounded-full transition-all duration-300 shadow-sm"
                     >
                       <LogOut className="w-4 h-4 stroke-[1.5]" />
                       Logout
@@ -145,13 +145,13 @@ export default function Header() {
                   <>
                     <Link
                       href="/login"
-                      className="text-[#241601]/90 hover:text-[#F46403] font-semibold text-[15px] tracking-wide transition-colors duration-300 mr-2"
+                      className="text-[#35353A] hover:text-[#E5008D] font-semibold text-[15px] tracking-wide transition-colors duration-300 mr-2"
                     >
                       Login
                     </Link>
                     <Link
                       href="/signup"
-                      className="bg-white/50 border border-gray-200 text-[#241601]/90 hover:bg-gray-50 hover:border-gray-300 font-semibold text-sm tracking-wide px-6 py-[10px] rounded-full transition-all duration-300 shadow-sm"
+                      className="bg-white/50 border border-[#693754] text-[#693754] hover:bg-[#562B43] hover:text-white font-semibold text-sm tracking-wide px-6 py-[10px] rounded-full transition-all duration-300 shadow-sm"
                     >
                       Sign Up
                     </Link>
@@ -161,7 +161,7 @@ export default function Header() {
                   href="https://wa.me/9891075655?text=Hello! I would like to make a donation."
                   target="_blank"
                   rel="noopener noreferrer"
-                className="flex items-center gap-2 bg-[#5C4033] hover:bg-[#422E25] hover:-translate-y-0.5 text-white font-bold text-sm tracking-wide px-6 py-[10px] rounded-full transition-all duration-300 shadow-[0_4px_14px_rgba(92,64,51,0.2)] hover:shadow-[0_6px_20px_rgba(92,64,51,0.3)]"
+                className="flex items-center gap-2 bg-[#E5008D] hover:bg-[#C80079] hover:-translate-y-0.5 text-white font-bold text-sm tracking-wide px-6 py-[10px] rounded-full transition-all duration-300 shadow-[0_4px_14px_rgba(229,0,141,0.2)] hover:shadow-[0_6px_20px_rgba(229,0,141,0.3)]"
                 >
                   <Heart className="w-5 h-5 stroke-[1.5]" fill="currentColor" />
                   Donate
@@ -173,7 +173,7 @@ export default function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden text-[#241601] hover:text-[#F46403] transition-colors"
+            className="md:hidden text-[#35353A] hover:text-[#E5008D] transition-colors"
           >
             {mobileMenuOpen ? (
               <X className="w-6 h-6 stroke-[1.5]" />
@@ -189,7 +189,7 @@ export default function Header() {
             <nav className="flex flex-col gap-3">
               {navLinks.map((link) => (
                 <div key={link.href} className="flex flex-col">
-                  <div className="flex items-center justify-between font-semibold text-base tracking-wide text-[#241601]/90 hover:text-[#F46403] py-2 transition-colors">
+                  <div className="flex items-center justify-between font-semibold text-base tracking-wide text-[#35353A] hover:text-[#E5008D] py-2 transition-colors">
                     <Link
                       href={link.href}
                       onClick={() => setMobileMenuOpen(false)}
@@ -206,7 +206,7 @@ export default function Header() {
                         className="p-1.5 -mr-1 rounded-lg hover:bg-gray-100 transition-colors"
                         aria-label="Toggle dropdown"
                       >
-                        <svg className={`w-5 h-5 transition-transform duration-300 ${openDropdown === link.href ? 'rotate-180 text-[#F46403]' : 'text-[#241601]/70'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className={`w-5 h-5 transition-transform duration-300 ${openDropdown === link.href ? 'rotate-180 text-[#E5008D]' : 'text-[#35353A]/70'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                         </svg>
                       </button>
@@ -219,7 +219,7 @@ export default function Header() {
                           key={dropItem.href}
                           href={dropItem.href}
                           onClick={() => setMobileMenuOpen(false)}
-                          className="text-[15px] font-medium text-[#241601]/70 hover:text-[#F46403] py-2 transition-colors"
+                          className="text-[15px] font-medium text-[#35353A]/70 hover:text-[#E5008D] py-2 transition-colors"
                         >
                           {dropItem.label}
                         </Link>
@@ -236,7 +236,7 @@ export default function Header() {
                         <Link
                           href="/profile"
                           onClick={() => setMobileMenuOpen(false)}
-                          className="flex items-center gap-2 text-[#241601]/90 hover:text-[#F46403] font-semibold text-base tracking-wide py-2"
+                          className="flex items-center gap-2 text-[#35353A] hover:text-[#E5008D] font-semibold text-base tracking-wide py-2"
                         >
                           <User className="w-5 h-5 stroke-[1.5]" />
                           {user.displayName || 'Profile'}
@@ -246,7 +246,7 @@ export default function Header() {
                             logout();
                             setMobileMenuOpen(false);
                           }}
-                          className="flex items-center gap-2 bg-gray-50 border border-gray-200 text-[#241601]/90 hover:bg-gray-100 font-semibold text-base tracking-wide px-4 py-2.5 rounded-xl transition-all duration-300 w-full justify-center shadow-sm"
+                          className="flex items-center gap-2 bg-transparent border border-[#693754] text-[#693754] hover:bg-[#562B43] hover:text-white font-semibold text-base tracking-wide px-4 py-2.5 rounded-xl transition-all duration-300 w-full justify-center shadow-sm"
                         >
                           <LogOut className="w-4 h-4 stroke-[1.5]" />
                           Logout
@@ -257,14 +257,14 @@ export default function Header() {
                         <Link
                           href="/login"
                           onClick={() => setMobileMenuOpen(false)}
-                          className="text-[#241601]/90 hover:text-[#F46403] font-semibold text-base tracking-wide py-2 text-center border border-transparent"
+                          className="text-[#35353A] hover:text-[#E5008D] font-semibold text-base tracking-wide py-2 text-center border border-transparent"
                         >
                           Login
                         </Link>
                         <Link
                           href="/signup"
                           onClick={() => setMobileMenuOpen(false)}
-                          className="bg-gray-50 border border-gray-200 hover:bg-gray-100 text-[#241601]/90 font-semibold text-base tracking-wide px-6 py-2.5 rounded-xl transition-all duration-300 text-center shadow-sm"
+                          className="bg-transparent border border-[#693754] text-[#693754] hover:bg-[#562B43] hover:text-white font-semibold text-base tracking-wide px-6 py-2.5 rounded-xl transition-all duration-300 text-center shadow-sm"
                         >
                           Sign Up
                         </Link>
@@ -274,7 +274,7 @@ export default function Header() {
                       href="https://wa.me/9891075655?text=Hello! I would like to make a donation."
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="bg-[#5C4033] hover:bg-[#422E25] text-white font-bold text-base tracking-wide px-6 py-2.5 rounded-xl transition-all duration-300 text-center w-full flex items-center justify-center gap-2 shadow-md"
+                      className="bg-[#E5008D] hover:bg-[#C80079] text-white font-bold text-base tracking-wide px-6 py-2.5 rounded-xl transition-all duration-300 text-center w-full flex items-center justify-center gap-2 shadow-md"
                     >
                       <Heart className="w-5 h-5 stroke-[1.5]" fill="currentColor" />
                       Donate

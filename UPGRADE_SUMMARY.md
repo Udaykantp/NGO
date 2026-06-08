@@ -7,10 +7,9 @@ The Nav Sanyogita Foundation website has been completely upgraded with a profess
 
 ### 1. **Design System & Color Palette**
 - **Updated Color Scheme**: Refined from previous colors to a sophisticated palette
-  - Dark Purple (#6A2A43) - Primary brand color
-  - Pink Red (#C53357) - Secondary accent
-  - Orange Gold (#CF8322) - Tertiary accent
-  - Light Cream (#F7EBE0) - Background
+  - Rich Magenta (#E5008D) - Primary brand color (Logos/CTAs)
+  - Deep Plum (#693754) - Secondary theme color
+  - Light Section Background (#FAF2F7) - Background
   - Deep supporting colors for depth and hierarchy
 
 ### 2. **Reusable Component Architecture**
@@ -116,11 +115,11 @@ The Nav Sanyogita Foundation website has been completely upgraded with a profess
 
 ### Color System (Updated)
 ```css
---primary: #6A2A43 (Dark Purple)
---secondary: #C53357 (Pink Red)
---accent: #CF8322 (Orange Gold)
---background: #F7EBE0 (Light Cream)
---text: #2D2D2D (Dark Gray)
+--primary: #693754 (Deep Plum)
+--secondary: #693754 (Deep Plum)
+--accent: #E5008D (Rich Magenta)
+--background: #FAF2F7 (Light Section Background)
+--text: #35353A (Dark Charcoal)
 ```
 
 ### Responsive Design

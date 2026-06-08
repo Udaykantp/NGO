@@ -54,13 +54,13 @@
 ### Header Component Updates (`components/header.tsx`)
 - **When NOT Logged In:**
   * "Login" link in navigation
-  * "Sign Up" button (pink/red)
-  * "Donate" button (green, WhatsApp)
+  * "Sign Up" button (Deep Plum)
+  * "Donate" button (Rich Magenta, WhatsApp)
 
 - **When Logged In:**
   * User profile with name and Google avatar
   * "Logout" button (red)
-  * "Donate" button (green, WhatsApp)
+  * "Donate" button (Rich Magenta, WhatsApp)
 
 - **Mobile Menu:**
   * Same auth options responsive on mobile
@@ -223,7 +223,7 @@ App Structure:
 ## ✨ Design Consistency
 
 All auth pages maintain the site's design language:
-- Color scheme: Dark Purple (#6A2A43), Pink Red (#C53357), Orange Gold (#CF8322)
+- Color scheme: Rich Magenta (#E5008D), Deep Plum (#693754), Dark Charcoal (#35353A)
 - Typography: Consistent heading and body font
 - Layout: Centered cards with professional spacing
 - Mobile: Fully responsive on all screen sizes
