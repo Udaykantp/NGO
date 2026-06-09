@@ -14,25 +14,31 @@ export default function ImpactPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="w-full relative py-20 md:py-32 overflow-hidden bg-[#241601]">
-        <div className="absolute inset-0 z-0 opacity-30">
-          <img 
-            src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=1600&h=800&fit=crop" 
-            alt="Impact Background" 
-            className="w-full h-full object-cover" 
+      <section className="w-full relative pt-32 pb-24 md:pt-48 md:pb-32 overflow-hidden bg-gray-900">
+        {/* Background Image & Overlay */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=1920&h=800&fit=crop"
+            alt="Impact Background"
+            className="w-full h-full object-cover object-center"
           />
+          <div className="absolute inset-0 bg-black/50"></div>
         </div>
-        <div className="absolute inset-0 bg-gradient-to-t from-[#241601] via-[#241601]/80 to-transparent z-0"></div>
-        <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
-          <span className="inline-block py-1.5 px-4 rounded-full bg-[#F46403]/20 text-[#F46403] font-bold text-sm mb-6 border border-[#F46403]/30 tracking-widest uppercase shadow-sm">
-            Our Impact
-          </span>
-          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-white mb-6 leading-tight">
-            Driving Change, <br className="hidden md:block"/> Empowering Lives
+
+        <div className="max-w-5xl mx-auto px-4 text-center relative z-10 text-white">
+          <h1 className="text-4xl md:text-6xl font-extrabold tracking-[-0.05em] mb-6 drop-shadow-lg">
+            Driving Change, Empowering Lives
           </h1>
-          <p className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto font-medium leading-relaxed">
+          <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto font-medium drop-shadow-md">
             See the real impact of women empowerment and skill development. We are committed to creating lasting, sustainable change in our communities.
           </p>
+        </div>
+
+        {/* Smooth Wavy Shape Divider */}
+        <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-10">
+          <svg viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" className="w-full h-[40px] md:h-[60px] block">
+            <path fill="#FCFCF9" d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"></path>
+          </svg>
         </div>
       </section>
 
