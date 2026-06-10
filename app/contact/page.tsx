@@ -14,7 +14,7 @@ export default function ContactPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="w-full relative pt-32 pb-24 md:pt-48 md:pb-32 overflow-hidden bg-gray-900">
+      <section className="w-full relative pt-28 pb-20 sm:pt-36 sm:pb-28 md:pt-44 md:pb-32 lg:pt-48 lg:pb-36 overflow-hidden bg-gray-900">
         {/* Background Image & Overlay */}
         <div className="absolute inset-0 z-0">
           <img
@@ -25,11 +25,11 @@ export default function ContactPage() {
           <div className="absolute inset-0 bg-black/50"></div>
         </div>
 
-        <div className="max-w-5xl mx-auto px-4 text-center relative z-10 text-white">
-          <h1 className="text-4xl md:text-6xl font-extrabold tracking-[-0.05em] mb-6 drop-shadow-lg">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 text-white">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-[-0.05em] mb-4 sm:mb-6 drop-shadow-lg">
             Contact Us
           </h1>
-          <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto font-medium drop-shadow-md">
+          <p className="text-lg sm:text-xl md:text-2xl text-white/90 max-w-3xl mx-auto font-medium drop-shadow-md">
             Have a question about our programs, want to volunteer, or interested in custom orders? We'd love to hear from you.
           </p>
         </div>
@@ -43,21 +43,21 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Content Section */}
-      <section className="w-full py-20 md:py-32">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 lg:gap-20">
+      <section className="w-full py-16 sm:py-20 md:py-24 lg:py-32">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 md:gap-16 lg:gap-20 items-start">
             
             {/* Contact Information */}
             <div>
-              <h2 className="text-3xl font-extrabold tracking-[-0.05em] text-[#211600] mb-6">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-[-0.05em] text-[#211600] mb-4 sm:mb-6">
                 Get In Touch
               </h2>
-              <p className="text-[#6E675A] leading-[1.8] mb-10">
+              <p className="text-base sm:text-lg text-[#6E675A] leading-[1.8] mb-8 sm:mb-10">
                 Whether you're looking to support our cause, join our skill development programs, or simply want to learn more about our mission, our team is ready to answer all your questions.
               </p>
 
-              <div className="space-y-8">
-                <div className="flex items-start gap-4">
+              <div className="space-y-6 sm:space-y-8">
+                <div className="flex items-start gap-4 sm:gap-6">
                   <div className="w-12 h-12 bg-[#F8F8F0] text-[#F46403] rounded-full flex items-center justify-center flex-shrink-0 shadow-sm border border-[rgba(36,22,1,0.06)]">
                     <MapPin className="w-6 h-6 stroke-[1.5]" />
                   </div>
@@ -69,7 +69,7 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4">
+                <div className="flex items-start gap-4 sm:gap-6">
                   <div className="w-12 h-12 bg-[#F8F8F0] text-[#4D7A4C] rounded-full flex items-center justify-center flex-shrink-0 shadow-sm border border-[rgba(36,22,1,0.06)]">
                     <Phone className="w-6 h-6 stroke-[1.5]" />
                   </div>
@@ -81,7 +81,7 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4">
+                <div className="flex items-start gap-4 sm:gap-6">
                   <div className="w-12 h-12 bg-[#F8F8F0] text-[#F46403] rounded-full flex items-center justify-center flex-shrink-0 shadow-sm border border-[rgba(36,22,1,0.06)]">
                     <Mail className="w-6 h-6 stroke-[1.5]" />
                   </div>
@@ -96,28 +96,28 @@ export default function ContactPage() {
             </div>
 
             {/* Contact Form */}
-            <div className="bg-white rounded-[24px] p-8 md:p-10 shadow-[0_18px_40px_rgba(20,12,0,0.12)] border border-[rgba(36,22,1,0.06)]">
-              <h3 className="text-2xl font-extrabold tracking-[-0.05em] text-[#211600] mb-6">Send us a Message</h3>
+            <div className="bg-white rounded-[20px] sm:rounded-[24px] p-6 sm:p-8 md:p-10 shadow-[0_18px_40px_rgba(20,12,0,0.12)] border border-[rgba(36,22,1,0.06)]">
+              <h3 className="text-2xl sm:text-3xl font-extrabold tracking-[-0.05em] text-[#211600] mb-6 sm:mb-8">Send us a Message</h3>
               <form className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid sm:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="firstName" className="block text-sm font-semibold text-[#211600] mb-2">First Name</label>
-                    <input type="text" id="firstName" className="w-full bg-[#FCFCF9] border border-[rgba(36,22,1,0.15)] rounded-lg px-4 py-3 focus:outline-none focus:border-[#F46403] focus:ring-1 focus:ring-[#F46403] transition" placeholder="John" />
+                    <input type="text" id="firstName" className="w-full bg-[#FCFCF9] border border-[rgba(36,22,1,0.15)] rounded-lg px-4 py-3 sm:py-3.5 text-base focus:outline-none focus:border-[#F46403] focus:ring-1 focus:ring-[#F46403] transition" placeholder="John" />
                   </div>
                   <div>
                     <label htmlFor="lastName" className="block text-sm font-semibold text-[#211600] mb-2">Last Name</label>
-                    <input type="text" id="lastName" className="w-full bg-[#FCFCF9] border border-[rgba(36,22,1,0.15)] rounded-lg px-4 py-3 focus:outline-none focus:border-[#F46403] focus:ring-1 focus:ring-[#F46403] transition" placeholder="Doe" />
+                    <input type="text" id="lastName" className="w-full bg-[#FCFCF9] border border-[rgba(36,22,1,0.15)] rounded-lg px-4 py-3 sm:py-3.5 text-base focus:outline-none focus:border-[#F46403] focus:ring-1 focus:ring-[#F46403] transition" placeholder="Doe" />
                   </div>
                 </div>
                 <div>
                   <label htmlFor="email" className="block text-sm font-semibold text-[#211600] mb-2">Email Address</label>
-                  <input type="email" id="email" className="w-full bg-[#FCFCF9] border border-[rgba(36,22,1,0.15)] rounded-lg px-4 py-3 focus:outline-none focus:border-[#F46403] focus:ring-1 focus:ring-[#F46403] transition" placeholder="john@example.com" />
+                  <input type="email" id="email" className="w-full bg-[#FCFCF9] border border-[rgba(36,22,1,0.15)] rounded-lg px-4 py-3 sm:py-3.5 text-base focus:outline-none focus:border-[#F46403] focus:ring-1 focus:ring-[#F46403] transition" placeholder="john@example.com" />
                 </div>
                 <div>
                   <label htmlFor="message" className="block text-sm font-semibold text-[#211600] mb-2">Message</label>
-                  <textarea id="message" rows={4} className="w-full bg-[#FCFCF9] border border-[rgba(36,22,1,0.15)] rounded-lg px-4 py-3 focus:outline-none focus:border-[#F46403] focus:ring-1 focus:ring-[#F46403] transition resize-none" placeholder="How can we help you?"></textarea>
+                  <textarea id="message" rows={5} className="w-full bg-[#FCFCF9] border border-[rgba(36,22,1,0.15)] rounded-lg px-4 py-3 sm:py-3.5 text-base focus:outline-none focus:border-[#F46403] focus:ring-1 focus:ring-[#F46403] transition resize-none" placeholder="How can we help you?"></textarea>
                 </div>
-              <button type="button" className="w-full bg-[#F46403] hover:bg-[#D95200] text-white font-bold px-8 py-4 rounded-full transition duration-300 shadow-md flex items-center justify-center gap-2">
+              <button type="button" className="w-full bg-[#F46403] hover:bg-[#D95200] text-white font-bold px-8 py-3.5 sm:py-4 rounded-full transition duration-300 shadow-md flex items-center justify-center gap-2 text-base sm:text-lg">
                   <MessageCircle className="w-5 h-5" />
                   Send Message
                 </button>
