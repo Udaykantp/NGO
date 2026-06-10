@@ -33,7 +33,7 @@ export default function ShopPage() {
       category: 'Tailoring',
       price: '₹899',
       description: 'Traditional silk dupatta with embroidered borders',
-      image: 'https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=400&h=400&fit=crop',
+      image: 'https://images.unsplash.com/photo-1605518216938-7c31b7b14ad0?w=400&h=400&fit=crop',
       details: 'Pure silk dupatta - hand-embroidered borders, traditional patterns, 2.5 meters'
     },
     {
@@ -51,7 +51,7 @@ export default function ShopPage() {
       category: 'Tailoring',
       price: '₹799',
       description: 'Traditional embroidered blouse with mirror work',
-      image: 'https://images.unsplash.com/photo-1595568022181-92d282ce6134?w=400&h=400&fit=crop',
+      image: 'https://images.unsplash.com/photo-1584992236310-6edddc08acff?w=400&h=400&fit=crop',
       details: 'Handmade embroidered blouse - mirror work, traditional designs, customizable sizes'
     },
     {
@@ -60,7 +60,7 @@ export default function ShopPage() {
       category: 'Handicrafts',
       price: '₹599',
       description: 'Beautiful macramé and embroidered wall hanging',
-      image: 'https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?w=400&h=400&fit=crop',
+      image: 'https://images.unsplash.com/photo-1544816155-12df9643f363?w=400&h=400&fit=crop',
       details: 'Hand-crafted wall hanging - macramé with beads, 24x30 inches, ready to hang'
     },
   ];

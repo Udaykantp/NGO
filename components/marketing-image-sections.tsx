@@ -7,7 +7,7 @@ type ImageSection = {
 
 const sections: ImageSection[] = [
   {
-    img: 'https://images.unsplash.com/photo-1520975958225-9f1b6dd6f0a4?w=1200&h=800&fit=crop',
+    img: 'https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=1200&h=800&fit=crop',
     title: 'Skill Training → Real Independence',
   },
   {
@@ -15,7 +15,7 @@ const sections: ImageSection[] = [
     title: 'Women-Made Products, Made with Love',
   },
   {
-    img: 'https://images.unsplash.com/photo-1543269865-cbfdb2d7a0c7?w=1200&h=800&fit=crop',
+    img: 'https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=1200&h=800&fit=crop',
     title: 'Community Support That Keeps Growing',
   },
   {
