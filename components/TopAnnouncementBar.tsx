@@ -15,7 +15,7 @@ export default function TopAnnouncementBar() {
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: -20, opacity: 0 }}
           transition={{ duration: 0.3 }}
-          className="relative w-full overflow-hidden flex items-center bg-[#241601] border-t border-[rgba(252,252,249,0.1)]"
+          className="relative w-full overflow-hidden flex items-center bg-[#693754] border-t border-[rgba(252,252,249,0.1)]"
           style={{ height: '48px' }}
         >
           {/* Subtle Professional Background Pattern */}
@@ -35,19 +35,19 @@ export default function TopAnnouncementBar() {
 
             {/* Center - Social Icons (Images) */}
             <div className="flex items-center justify-center gap-6 flex-1 text-[#FCFCF9]/60">
-              <a href="#" className="hover:text-[#F46403] hover:scale-110 transition-all duration-300" aria-label="Facebook">
+              <a href="#" className="hover:text-[#E5008D] hover:scale-110 transition-all duration-300" aria-label="Facebook">
                 <Facebook className="w-4 h-4 md:w-5 md:h-5 stroke-[1.5]" />
               </a>
-              <a href="#" className="hover:text-[#F46403] hover:scale-110 transition-all duration-300" aria-label="Instagram">
+              <a href="#" className="hover:text-[#E5008D] hover:scale-110 transition-all duration-300" aria-label="Instagram">
                 <Instagram className="w-4 h-4 md:w-5 md:h-5 stroke-[1.5]" />
               </a>
-              <a href="#" className="hover:text-[#F46403] hover:scale-110 transition-all duration-300" aria-label="Twitter">
+              <a href="#" className="hover:text-[#E5008D] hover:scale-110 transition-all duration-300" aria-label="Twitter">
                 <Twitter className="w-4 h-4 md:w-5 md:h-5 stroke-[1.5]" />
               </a>
-              <a href="#" className="hover:text-[#F46403] hover:scale-110 transition-all duration-300" aria-label="LinkedIn">
+              <a href="#" className="hover:text-[#E5008D] hover:scale-110 transition-all duration-300" aria-label="LinkedIn">
                 <Linkedin className="w-4 h-4 md:w-5 md:h-5 stroke-[1.5]" />
               </a>
-              <a href="#" className="hover:text-[#F46403] hover:scale-110 transition-all duration-300" aria-label="YouTube">
+              <a href="#" className="hover:text-[#E5008D] hover:scale-110 transition-all duration-300" aria-label="YouTube">
                 <Youtube className="w-4 h-4 md:w-5 md:h-5 stroke-[1.5]" />
               </a>
             </div>

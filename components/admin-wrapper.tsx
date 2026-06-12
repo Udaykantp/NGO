@@ -86,7 +86,7 @@ export default function AdminWrapper({ children, title, description }: AdminWrap
           {/* Sidebar Navigation */}
           <div className="md:col-span-1">
             <div className="sticky top-4">
-              <div className="bg-[var(--color-white)] rounded-lg shadow-md p-4 border border-[#DFE2CF]">
+            <div className="bg-[var(--color-white)] rounded-lg shadow-md p-4 border border-[#C89AB4]/50">
                 <h2 className="text-lg font-bold tracking-wide text-[var(--color-heading)] mb-4">Admin</h2>
                 <AdminNav />
               </div>

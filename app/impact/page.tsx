@@ -1,6 +1,7 @@
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 import MarketingImageSections from '@/components/marketing-image-sections';
+import { Users, ShoppingBag, Map, Heart } from 'lucide-react';
 
 export const metadata = {
   title: 'Our Impact | Nav Sanyogita Foundation',
@@ -13,33 +14,54 @@ export default function ImpactPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="w-full relative bg-[#CCD3B1] py-12 md:py-24 overflow-hidden border-b border-[rgba(36,22,1,0.08)]">
-        <div className="max-w-7xl mx-auto px-4 text-center relative z-10">
-          <h1 className="text-3xl md:text-5xl font-extrabold tracking-[-0.05em] text-[#211600] mb-4 md:mb-6">
-            Our Impact & Objectives
+      <section className="w-full relative pt-32 pb-24 md:pt-48 md:pb-32 overflow-hidden bg-gray-900">
+        {/* Background Image & Overlay */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=1920&h=800&fit=crop"
+            alt="Impact Background"
+            className="w-full h-full object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-black/50"></div>
+        </div>
+
+        <div className="max-w-5xl mx-auto px-4 text-center relative z-10 text-white">
+          <h1 className="text-4xl md:text-6xl font-extrabold tracking-[-0.05em] mb-6 drop-shadow-lg">
+            Driving Change, Empowering Lives
           </h1>
-          <p className="text-base sm:text-lg md:text-xl text-[#211600]/80 max-w-3xl mx-auto font-medium leading-relaxed">
-            See the real impact of women empowerment and skill development. We are committed to creating lasting change in our communities.
+          <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto font-medium drop-shadow-md">
+            See the real impact of women empowerment and skill development. We are committed to creating lasting, sustainable change in our communities.
           </p>
+        </div>
+
+        {/* Smooth Wavy Shape Divider */}
+        <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-10">
+          <svg viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" className="w-full h-[40px] md:h-[60px] block">
+            <path fill="#FCFCF9" d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"></path>
+          </svg>
         </div>
       </section>
 
       {/* Stats Section */}
-      <section className="w-full py-12 md:py-20">
+      <section className="w-full py-16 md:py-24 bg-[#FCFCF9]">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="flex md:grid overflow-x-auto md:overflow-visible md:grid-cols-4 gap-4 md:gap-6 text-center pb-6 md:pb-0 snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] -mx-4 px-4 md:mx-0 md:px-0 after:content-[''] after:w-[1px] after:flex-shrink-0 after:md:hidden">
+          <div className="flex md:grid overflow-x-auto md:overflow-visible md:grid-cols-4 gap-6 md:gap-8 text-center pb-8 md:pb-0 snap-x snap-mandatory [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] -mx-4 px-4 md:mx-0 md:px-0 after:content-[''] after:w-[1px] after:flex-shrink-0 after:md:hidden">
             {[
-              { number: '5,000+', label: 'Women Trained' },
-              { number: '10,000+', label: 'Products Sold' },
-              { number: '50+', label: 'Communities Reached' },
-              { number: '100%', label: 'Commitment' },
+              { number: '5,000+', label: 'Women Trained', icon: <Users className="w-8 h-8 text-[#F46403]" />, color: 'from-[#F46403]/10 to-transparent', borderColor: 'border-[#F46403]/20' },
+              { number: '10,000+', label: 'Products Sold', icon: <ShoppingBag className="w-8 h-8 text-[#4E9B71]" />, color: 'from-[#4E9B71]/10 to-transparent', borderColor: 'border-[#4E9B71]/20' },
+              { number: '50+', label: 'Communities Reached', icon: <Map className="w-8 h-8 text-[#F9D05F]" />, color: 'from-[#F9D05F]/10 to-transparent', borderColor: 'border-[#F9D05F]/20' },
+              { number: '100%', label: 'Commitment', icon: <Heart className="w-8 h-8 text-[#C53357]" />, color: 'from-[#C53357]/10 to-transparent', borderColor: 'border-[#C53357]/20' },
             ].map((stat, index) => (
               <div
                 key={index}
-                className="flex-shrink-0 w-[65vw] sm:w-[40vw] md:w-auto snap-center bg-white rounded-[16px] md:rounded-[24px] p-6 md:p-8 shadow-[0_8px_24px_rgba(20,12,0,0.08)] md:shadow-[0_18px_40px_rgba(20,12,0,0.12)] border border-[rgba(36,22,1,0.06)] flex flex-col justify-center items-center min-h-[140px]"
+                className={`flex-shrink-0 w-[70vw] sm:w-[45vw] md:w-auto snap-center bg-white rounded-[24px] p-8 shadow-sm hover:shadow-xl transition-all duration-300 border ${stat.borderColor} flex flex-col justify-center items-center relative overflow-hidden group hover:-translate-y-2`}
               >
-                <div className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#F46403] mb-1 sm:mb-2">{stat.number}</div>
-                <p className="text-[#211600] font-bold text-sm md:text-base leading-snug">{stat.label}</p>
+                <div className={`absolute top-0 left-0 w-full h-full bg-gradient-to-b ${stat.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
+                <div className="w-16 h-16 rounded-full bg-white shadow-sm border border-gray-100 flex items-center justify-center mb-6 relative z-10 group-hover:scale-110 transition-transform duration-300">
+                  {stat.icon}
+                </div>
+                <div className="text-4xl md:text-5xl font-extrabold text-[#211600] mb-2 relative z-10 tracking-tight">{stat.number}</div>
+                <p className="text-[#6E675A] font-bold text-sm md:text-base relative z-10 uppercase tracking-wide">{stat.label}</p>
               </div>
             ))}
           </div>
